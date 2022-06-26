@@ -1,0 +1,100 @@
+.stages {
+    padding: 78px 12px 168px;
+    @include adaptiveValue("padding-top", 78, 60, 1240, 320, 1);
+    @include adaptiveValue("padding-bottom", 168, 60, 1240, 320, 1);
+
+    &__list {
+        counter-reset: listCounter;
+        position: relative;
+        background-repeat: no-repeat;
+        max-width: 1220px;
+        width: 100%;
+        z-index: -3;
+
+        @include r(992) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-image: none !important;
+        }
+    }
+
+
+
+    &__item {
+        position: relative;
+        counter-increment: listCounter;
+        max-width: 348px;
+        width: 100%;
+        height: auto;
+        padding: 39px 39px 51px 40px;
+        border: 2px solid $accent;
+        box-shadow: 0px 24px 38px rgba(220, 220, 220, 0.14), 0px 9px 46px rgba(216, 216, 216, 0.12), 0px 11px 15px rgba(221, 221, 221, 0.2);
+        border-radius: 12px;
+        background-color: $white;
+        z-index: 1;
+        @include adaptiveValue("padding-top", 39, 25, 992, 320, 1);
+        @include adaptiveValue("padding-bottom", 51, 25, 992, 320, 1);
+        @include adaptiveValue("padding-right", 39, 25, 992, 320, 1);
+        @include adaptiveValue("padding-left", 39, 25, 992, 320, 1);
+
+
+        &::before {
+            position: absolute;
+            content: ""counter(listCounter);
+            color: $accent;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 37px;
+            width: 50px;
+            height: 50px;
+            left: -10px;
+            bottom: -18px;
+            padding: 6px 18px;
+            background-color: #F9F4EE;
+            border-radius: 50%;
+            z-index: 3;
+        }
+
+        @include r(992) {
+            &:not(:last-child) {
+                margin-bottom: 25px;
+            }
+        }
+
+        @media screen and (min-width: 993px) {
+            &:nth-child(2) {
+                margin-left: 500px;
+                transform: translateY(-80%);
+            }
+
+            &:nth-child(3) {
+                margin-left: auto;
+                transform: translateY(-20%);
+            }
+
+            &:nth-child(4) {
+                transform: translateY(-100%);
+            }
+
+            &:nth-child(5) {
+                margin-left: 400px;
+                transform: translateY(-100%);
+            }
+        }
+
+        &-title {
+            display: block;
+            text-align: center;
+            font-size: 18px;
+            color: $secondaryColor;
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 12px;
+        }
+
+        &-text {
+            line-height: 1.4;
+        }
+    }
+}

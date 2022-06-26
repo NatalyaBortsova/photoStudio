@@ -1,0 +1,89 @@
+.hero {
+
+    &__wrapper {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    &__video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+
+    &__overlay {
+        position: absolute;
+        left: 0;
+        z-index: 2;
+        width: 100vw;
+        min-height: 860px;
+        background-color: rgba(0, 0, 0, 0.75);
+    }
+
+    &__content {
+        padding: 140px 0;
+        position: relative;
+        color: #F5F5F5;
+        z-index: 5;
+        @include adaptiveValue("padding-top", 140, 60, 1240, 320, 1);
+        @include adaptiveValue("padding-bottom", 140, 60, 1240, 320, 1);
+    }
+
+    &__title {
+        max-width: 820px;
+        width: 100%;
+        font-weight: 700;
+        font-size: 66px;
+        line-height: 1.2;
+        letter-spacing: 3.2px;
+        @include adaptiveValue("font-size", 66, 22, 1240, 320, 1);
+
+        @include r(992) {
+            line-height: 1.1;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 52px;
+            @include adaptiveValue("margin-bottom", 52, 25, 1240, 320, 1);
+        }
+
+    }
+
+    &__subtitle {
+        max-width: 550px;
+        width: 100%;
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 120%;
+        @include adaptiveValue("font-size", 36, 18, 1240, 320, 1);
+
+        &:not(:last-child) {
+            margin-bottom: 24px;
+            @include adaptiveValue("margin-bottom", 24, 10, 1240, 320, 1);
+        }
+    }
+
+    &__text {
+        max-width: 791px;
+        width: 100%;
+        line-height: 26px;
+        text-align: justify;
+
+        &:not(:last-child) {
+            margin-bottom: 32px;
+            @include adaptiveValue("margin-bottom", 32, 15, 1240, 320, 1);
+        }
+    }
+
+    &__button {
+        padding: 22px 10px;
+        max-height: 64px;
+        max-width: 366px;
+        width: 100%;
+    }
+}

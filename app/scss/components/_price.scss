@@ -1,0 +1,263 @@
+.price {
+    padding: 118px 0 169px;
+    @include adaptiveValue("padding-top", 118, 60, 1240, 320, 1);
+    @include adaptiveValue("padding-bottom", 169, 60, 1240, 320, 1);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    &__title {
+        margin-bottom: 80px;
+        @include adaptiveValue("margin-bottom", 80, 20, 1240, 320, 1);
+
+    }
+
+    &__list {
+        display: grid;
+        column-gap: 22px;
+        row-gap: 22px;
+        @include adaptiveValue("column-gap", 22, 10, 1240, 768, 1);
+        @include adaptiveValue("row-gap", 22, 10, 1240, 320, 1);
+
+        @media screen and (min-width: 768px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media screen and (min-width: 1024px) {
+            grid-template-columns: repeat(3, minmax(250px, 1fr));
+        }
+    }
+
+    &__item {
+        margin: 0 auto;
+    }
+
+    &__card {
+        max-width: 398px;
+        width: 100%;
+        min-height: 698px;
+        height: 100%;
+        overflow: hidden;
+        padding: 48px 14px 42px;
+        border-radius: 16px;
+    }
+
+    .card {
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-rows: 1fr minmax(48px, auto);
+        color: $secondaryColor;
+
+        &__content {
+            margin-bottom: 40px;
+        }
+
+        &__text {
+            padding: 0 31px 31px;
+        }
+
+        &__title {
+            font-weight: 600;
+            font-size: 18px;
+            text-transform: uppercase;
+            line-height: 1.2;
+            margin-bottom: 16px;
+            color: $mainColor;
+        }
+
+        &__price {
+            display: block;
+            font-weight: 700;
+            font-size: 56px;
+            line-height: 1.2;          
+            @include adaptiveValue("font-size", 56, 25, 1240, 320, 1);           
+        }
+
+        &__place {
+            display: block;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 140%;
+            color: #838383;
+            margin-bottom: 40px;
+            @include adaptiveValue("margin-bottom", 40, 25, 1240, 320, 1);
+        }
+
+        &__item {
+            position: relative;
+            line-height: 1.4;
+            padding-left: 26px;
+
+            &:not(:last-child) {
+                margin-bottom: 16px;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 18px;
+                height: 18px;
+                background-image: url('../../images/check-circle.svg');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                top: 2px;
+                left: 0;
+                padding: 5px;
+            }
+        }
+
+
+        &__services {
+            display: block;
+            line-height: 1.4;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 12px;
+
+            &-list {
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                gap: 5px;
+
+                @include r(375) {
+                    flex-wrap: wrap;
+                }
+            }
+
+
+            &-item {
+                background: #FFFFFF;
+                border: 1px solid #C2C2C2;
+                border-radius: 5px;
+                padding: 6px 5px;
+                font-size: 12px;
+                line-height: 1.2;
+                flex: 1 1 auto;
+                @include adaptiveValue("font-size", 12, 11, 1240, 1024, 1);
+
+
+            }
+        }
+
+        &__button {
+            width: 100%;
+            max-width: 370px;
+        }
+    }
+
+    [data-calculate='calculate'] {
+        position: relative;
+        background-color: #b9b4b4;
+        cursor: pointer;
+        transition: background-color 0.3s ease 0s;
+
+        &:hover {
+            background-color: rgba($black, 0.5);
+
+            &::before {
+                opacity: 1;
+            }
+        }
+
+        &::before {
+            content: 'Рассчитать';
+            position: absolute;
+            top: 25%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            color: $white;
+            opacity: 0;
+            transition: opacity 0.3s ease 0s;
+        }
+
+    }
+}
+
+.calculate {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba($black, 0.5);
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+    display: none;
+
+    &.active {
+        display: block;
+    }
+
+    &__wrapper {
+        position: absolute;
+        max-width: 680px;
+        max-height: 307px;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__content {
+        position: relative;
+        background-color: $white;
+        padding: 42px 48px;
+    }
+
+
+    &__title {
+        margin-bottom: 32px;
+        display: block;
+    }
+
+    &__form {
+        max-width: 420px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    &__block {
+        margin-bottom: 32px;
+    }
+
+    &__label {
+        display: block;
+        line-height: 12px;
+        color: #121621;
+        opacity: 0.4;
+        margin-bottom: 8px;
+    }
+
+    &__input {
+        background-color: $white;
+        width: 100%;
+        border: 1px solid #DDDEE4;
+        border-radius: 5px;
+        padding: 18px 16px;
+        height: 48px;
+
+        &::placeholder {
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 12px;
+            color: #B1B1B1;
+            opacity: 0.4;
+        }
+    }
+
+    &__button {
+        width: 100%;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    input[type='number'] {
+        -moz-appearance: textfield;
+    }
+}

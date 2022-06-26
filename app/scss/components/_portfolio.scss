@@ -1,0 +1,115 @@
+.portfolio {
+    padding: 120px 0 60px;
+    @include adaptiveValue("padding-top", 120, 60, 1240, 320, 1);
+
+    &__slider {
+        position: relative;
+        @include r(500) {
+            margin: -5px;
+        }
+    }
+
+    &__wrapper {
+        margin-bottom: 52px;
+        @include adaptiveValue("margin-bottom", 52, 20, 1240, 320, 1);
+    }
+
+    &__slide {
+        width: 488px;
+        max-height: 618px;
+        cursor: pointer;
+    }
+
+    &__buttons {
+        position: absolute;
+        z-index: 10;
+        top: 50%;
+        width: 100%;
+        height: 73px;
+        transform: translateY(-100%);
+        @include r(575) {
+            transform: translateY(-50%);
+        }
+    }
+
+    &__button {
+        width: 73px;
+        height: 73px;
+        border-radius: 50%;
+        background-color: rgba($white, 0.7);
+
+        @include r(768) {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    &__pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        color: $accent;
+    }
+
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+        font-size: 36px;
+
+        @include r(768) {
+            font-size: 20px;
+            font-weight: 700;
+        }
+    }
+
+    .swiper-button-next {
+        right: 25%;
+
+        @include r(1024) {
+            @include adaptiveValue("right", 40, 15, 992, 320, 1);
+        }
+    }
+
+    .swiper-button-prev {
+        left: 25%;
+
+        @include r(1024) {
+
+            @include adaptiveValue("left", 40, 15, 992, 320, 1);
+        }
+    }
+
+    .swiper-pagination {
+        display: none;
+
+        @include r(992) {
+            display: block;
+        }
+    }
+
+    .swiper-pagination-bullet {
+        width: 6px;
+        height: 6px;
+        background-color: #B1B1B1;
+
+        &-active {
+            margin-top: 2px;
+            border-radius: 50%;
+            width: 12px;
+            height: 12px;
+            background-color: $accent;
+        }
+
+        &:not(:last-child) {
+            margin-right: 15px;
+        }
+    }
+
+    .baguetteBox-button {
+        color: $accent !important;
+    }
+
+}

@@ -1,0 +1,26 @@
+.interior {
+    padding: 60px 0;
+
+    &__wrapper {
+        position: relative;
+        width: 100%;
+        max-height: 675px;
+        overflow: hidden;
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+    }
+
+    &__video {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+}

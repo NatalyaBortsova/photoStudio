@@ -1,0 +1,19 @@
+//Container & Breakpoints
+@use "sass:math" as math;
+$maxWidthContainer: 1200;
+$containerPadding: 40;
+$containerWidth: $maxWidthContainer + $containerPadding;
+$containerSidePadding: math.div($containerPadding, 2);
+$maxWidth: 1240;
+$minWidth: 320;
+//Fonts
+$fontMain: 'Monserrat', sans-serif;
+$fontSecondary: 'Arial', sans-serif;
+$fontTitle: 'FuturaLT', sans-serif;
+
+//Colors
+$mainColor: #4A4A4A;
+$secondaryColor: #333333;
+$accent: #e97522;
+$white: #ffffff;
+$black: #000000;

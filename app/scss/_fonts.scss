@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'Arial';
+    font-weight: 400;
+    font-style: normal;
+    src: url('../fonts/ArialRegular.woff2') format('woff2'),
+        url('../fonts/ArialRegulr.woff') format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Arial';
+    font-weight: 700;
+    font-style: normal;
+    src: url('../fonts/ArialBold.woff2') format('woff2'),
+        url('../fonts/ArialBold.woff') format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Monserrat';
+    font-weight: 400;
+    font-style: normal;
+    src: url('../fonts/Montserrat-Medium.woff2') format('woff2'),
+        url('../fonts/Montserrat-Medium.woff') format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Monserrat';
+    font-weight: 400;
+    font-style: normal;
+    src: url('../fonts/Montserrat-Bold.woff2') format('woff2'),
+        url('../fonts/Montserrat-Bold.woff') format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Monserrat';
+    font-weight: 400;
+    font-style: normal;
+    src: url('../fonts/Montserrat-SemiBold.woff2') format('woff2'),
+        url('../fonts/Montserrat-SemiBold.woff') format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FuturaLT';
+    font-weight: 400;
+    font-style: normal;
+    src: url('../fonts/FuturaLT-Bold.woff2') format('woff2'),
+        url('../fonts/FuturaLT-Bold.woff') format('woff');
+    font-display: swap;
+}

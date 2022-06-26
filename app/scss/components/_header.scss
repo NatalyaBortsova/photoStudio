@@ -1,0 +1,171 @@
+nav {
+    overflow: hidden;
+    color: $mainColor;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 23px 0 22px;
+}
+
+.navbar {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    flex: 0 0 108px;
+    margin-right: 50px;
+    @include adaptiveValue("margin-right", 50, 10, 1240, 992, 1);
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include r(992) {
+        position: fixed;
+        flex-direction: column;
+        justify-content: start;
+        height: 100vh;
+        width: 100vw;
+        background-color: $mainColor;
+        color: $white;
+        padding: 70px 0 20px;
+        z-index: 6;
+        left: 0;
+        top: 0;
+        transform: translateY(-200%);
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out, transform 0.5s ease-out;
+
+        &.active {
+            transform: translateY(0%);
+            opacity: 1;
+        }
+    }
+
+    &__item {
+        &.active {
+            color: $accent;
+        }
+
+        &:not(:last-child) {
+            margin-right: 32px;
+            @include adaptiveValue("margin-right", 32, 10, 1240, 992, 1);
+
+            @include r(992) {
+                margin: 10px 0;
+
+            }
+        }
+    }
+
+    &__link {
+        padding: 10px 0;
+        transition: color 0.3s ease 0s;
+
+        &:hover {
+            color: $accent;
+        }
+
+        &:active {
+            color: $accent;
+        }
+    }
+}
+
+.burger {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    padding: 12px;
+    display: none;
+    cursor: pointer;
+    z-index: 7;
+
+    @include r(992) {
+        display: block;
+    }
+
+    &__line {
+        position: absolute;
+        background-color: $black;
+        left: 10px;
+        width: 20px;
+        height: 2px;
+        top: 14px;
+        transition: transform 0.5s;
+    }
+
+    &::before,
+    &::after {
+        @include pseudo;
+        left: 10px;
+        background-color: $black;
+        width: 20px;
+        height: 2px;
+        transition: transform 0.5s;
+    }
+
+    &::before {
+        top: 6px;
+    }
+
+    &::after {
+        bottom: 6px;
+    }
+
+    &_active {
+        .burger__line {
+            transform: scale(0);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        &::before {
+            transform: rotate(45deg);
+            top: 50%;
+            transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+        }
+
+        &::after {
+            transform: rotate(-45deg);
+            top: 50%;
+            transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+        }
+    }
+}
+
+
+.phone-contact {
+    @include r(992) {
+        margin-left: auto;
+        margin-right: 10px;
+    }
+
+    @include r(576) {
+        margin: auto 0 0;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+
+    &__button {
+        margin-right: 24px;
+        @include adaptiveValue("margin-right", 24, 10, 1240, 992, 1);
+
+        @include r(576) {
+            margin: 0;
+
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    &__phone {
+        font-weight: 600;
+    }
+
+}

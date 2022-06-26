@@ -1,0 +1,61 @@
+.info-block {
+    padding: 60px 0 40px;
+
+    &_gray {
+        background-color: #F2F4F4;
+    }
+
+    &_pink {
+        background-color: #F9F4EE;
+    }
+
+    &__title {
+        margin-bottom: 32px;
+    }
+
+    &__text {
+        font-weight: 600;
+        line-height: 26px;
+
+        p {
+            &:not(:last-child) {
+                margin-bottom: 25px;
+            }
+        }
+        &.close {
+            @include line-clamp(6);
+        }
+    }
+
+    &__button {
+        position: relative;
+        cursor: pointer;
+        display: block;
+        font-weight: 600;
+        line-height: 24px;
+        color: $accent;
+        padding-right: 30px;
+        margin-left: auto;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 20px;
+            right: 0;
+            top: 3px;
+            background-image: url('../../images/arrow.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            transform: rotate(90deg);
+            transition: transform 0.5s ease-in-out;
+        }
+
+        &.active {
+            &::after {
+                transform: rotate(-90deg);
+            }
+        }
+    }
+}
