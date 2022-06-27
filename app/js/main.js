@@ -236,61 +236,108 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
   ////////////////////CalculateForm
 
-  const calculateBtnOpen = document.querySelectorAll(".card__services-item");
-  const calculateWindow = document.querySelector(".calculate");
-  const calculateInput = document.querySelector(".calculate__input");
-  const calculateBtnSave = document.querySelector(".calculate__button");
-  const cardPrice = document.querySelectorAll(".card__price");
-  let textPriceNumber;
-  let resultCalculate;
+  // const calculateBtnOpen = document.querySelectorAll(".card__services-item");
+  // const calculateWindow = document.querySelector(".calculate");
+  // const calculateInput = document.querySelector(".calculate__input");
+  // const calculateBtnSave = document.querySelector(".calculate__button");
+  // const cardPrice = document.querySelectorAll(".card__price");
+  // let textPriceNumber;
+  // let number;
 
-  function openCalculateWindow() {
-    calculateWindow.classList.add("active");
-  }
+  // function openCalculateWindow() {
+  //   calculateWindow.classList.add("active");
+  // }
 
-  function closeCalculateWindow() {
-    calculateWindow.classList.remove("active");
-  }
+  // function closeCalculateWindow() {
+  //   calculateWindow.classList.remove("active");
+  // }
 
-  calculateWindow.addEventListener("click", (e) => {
-    if (
-      e.target === calculateWindow &&
-      calculateWindow.classList.contains("active")
-    ) {
-      closeCalculateWindow();
+  // calculateWindow.addEventListener("click", (e) => {
+  //   if (
+  //     e.target === calculateWindow &&
+  //     calculateWindow.classList.contains("active")
+  //   ) {
+  //     closeCalculateWindow();
+  //   }
+  // });
+
+  // document.addEventListener("keydown", (e) => {
+  //   if (e.code === "Escape" && calculateWindow.classList.contains("active")) {
+  //     closeCalculateWindow();
+  //   }
+  // });
+
+  // calculateBtnOpen.forEach((item) => {
+  //   item.addEventListener("click", (e) => {
+  //     openCalculateWindow();
+  //     let target = e.target;
+  //     const currBtn = target.dataset.calculate;
+  //   });
+  // });
+
+  // // calculateBtnSave.addEventListener("click", closeCalculateWindow);
+
+  // const takeNumber = () => {
+  //   for (let i = 0; i < cardPrice.length; i++) {
+  //     let textPrice = cardPrice[i];
+  //     textPriceNumber = textPrice.outerText.slice(0, -2);
+  //   }
+  // };
+
+  // calculateInput.addEventListener("input", () => {
+  //   number = +calculateInput.value;
+  // });
+
+  // calculateBtnSave.addEventListener("click", (e) => {
+  //   takeNumber(price);
+  //   console.log(price)
+  //   let calculate = number * 50 + Number(textPriceNumber);
+  //   cardPrice.outerText += calculate + "₴";
+  //   number = "";
+  // });
+
+  //   tabs.addEventListener('click', e => {
+  //     const currTab = e.target.dataset.btn;
+  //     changeClass(e.target);
+  //     for(let i = 0; i < content.length; i++) {
+  //         content[i].classList.remove('active');
+  //         if(content[i].dataset.content === currTab) {
+  //             content[i].classList.add('active');
+  //         }
+  //     }
+  // })
+
+  const popup = document.querySelector(".calculate");
+
+  document.querySelector(".price__list").addEventListener("click", (event) => {
+    if (event.target.classList.contains("card__services-btn")) {
+      const count = event.target.getAttribute("data-calculate");
+      const price = event.target.getAttribute("data-price");
+      const priceBtn = event.target;
+
+      popup.classList.add("active");
+      document
+        .querySelector(".calculate__button")
+        .addEventListener("click", changeTitle);
+
+      function changeTitle() {
+        const input = document.querySelector(".calculate__input");
+
+        if (+input.value) {
+            event.target.closest('.card__content').querySelector('.card__price').innerHTML = +input.value * +count + +price + " " + "₴";            
+        }
+        popup.classList.remove("active");
+        document
+          .querySelector(".calculate__button")
+          .removeEventListener("click", changeTitle);
+        input.value = "";
+      }
     }
   });
 
-  document.addEventListener("keydown", (e) => {
-    if (e.code === "Escape" && calculateWindow.classList.contains("active")) {
-      closeCalculateWindow();
+  popup.addEventListener("click", (e) => {
+    if (e.target.classList.contains("active") && e.target === popup) {
+      popup.classList.remove("active");
     }
   });
-
-  calculateBtnOpen.forEach((item) => {
-    item.addEventListener("click", () => {
-      openCalculateWindow();
-    });
-  });
-
-  calculateBtnSave.addEventListener("click", closeCalculateWindow);
-
-
-  const takeNumber = () => {
-    for (let i = 0; i < cardPrice.length; i++) {
-      let textPrice = cardPrice[i];
-      textPriceNumber = textPrice.outerText.slice(0, -2);
-    }
-  }
-  calculateInput.addEventListener("input", () => {
-    let number = +calculateInput.value;
-    let calculate = number + Number(textPriceNumber)
-    console.log(calculate)
-  });
-
-
-
-
-
-  
 });
