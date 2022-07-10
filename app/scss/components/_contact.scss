@@ -1,0 +1,108 @@
+.contact {
+    padding: 100px 0 150px;
+    @include adaptiveValue("padding-top", 100, 60, 1240, 320, 1);
+    @include adaptiveValue("padding-bottom", 150, 60, 1240, 320, 1);
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+
+        @include r(768) {
+            flex-direction: column-reverse;
+            gap: 20px;
+        }
+    }
+
+    &__map {
+        position: relative;
+        flex: 1 1 55%;
+
+        @include r(768) {
+            width: 100%;
+        }
+    }
+
+    &__address {
+        position: absolute;
+        padding: 34px 22px 44px 31px;
+        border-radius: 8px;
+        right: 74px;
+        top: 50%;
+        transform: translateY(-50%);
+        max-width: 256px;
+        width: 100%;
+        max-height: 251px;
+        height: 100%;
+        background-color: $mainColor;
+        box-shadow: 0 4px 4px rgba($black, 0.25);
+        color: $white;
+        line-height: 20px;
+        font-weight: 600;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        @include r(768) {
+            display: none;
+            top: 30%;
+            right: 10px;
+        }
+
+        &.open {
+            display: block;
+        }
+
+        &-open {
+            background-color: $mainColor;
+            color: $white;
+            padding: 5px;
+            border-radius: 3px;
+            display: none;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            @include adaptiveValue("font-size", 16, 10, 768, 320, 1);
+
+            @include r(768) {
+                display: block;
+            }
+        }
+    }
+
+    &__logo {
+        margin-bottom: 30px;
+    }
+
+    &__schedule {
+        display: block;
+    }
+
+    &__feedback {
+        min-height: 595px;
+        height: 100%;
+        flex: 1 1 45%;
+        background-color: $bg;
+        border-radius: 25px;
+        padding: 36px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @include adaptiveValue("padding-right", 36, 20, 1240, 320, 1);
+        @include adaptiveValue("padding-left", 36, 20, 1240, 320, 1);
+    }
+
+    &__title {
+        font-size: 30px;
+        margin-bottom: 32px;
+        @include adaptiveValue("font-size", 30, 18, 1240, 320, 1);
+        @include adaptiveValue("margin-bottom", 32, 18, 1240, 320, 1);
+    }
+
+    &__form {
+        .modal__inputs:nth-last-child(3) {
+            margin-bottom: 32px;
+        }
+    }
+}

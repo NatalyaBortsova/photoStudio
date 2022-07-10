@@ -1,0 +1,68 @@
+<div class="modal modal_location">
+    <div class="modal__wrapper">
+        <div class="modal__content">
+            <button type="button" class="modal__close">Х</button>
+            <div class="modal__image">
+                <picture>
+                    <source srcset="../../images/modal/location-modal.png" media="(max-width: 1024px)" width="300"
+                        height="300">
+                    <img src="../../images/modal/location-modal.png" alt="форма обратной связи" width="450"
+                        height="475" />
+                </picture>
+            </div>
+            <div class="modal__contact">
+                <h2 class="modal__title title">Форма обратной связи</h2>
+                <form action="#" class="modal__form">
+                    <div class="modal__inputs">
+                        <label for="name" class="modal__label">Имя</label>
+                        <input autocomplete="off" type="text" name="name" id="locationName" data-error="Ошибка"
+                            placeholder="Введите ваше имя" class="modal__input" required>
+                    </div>
+                    <div class="modal__inputs">
+                        <label for="email" class="modal__label">E-mail</label>
+                        <input autocomplete="off" type="email" name="email" id="locationEmail" data-error="Ошибка"
+                            placeholder="Введите ваш E-mail" class="modal__input" required>
+                    </div>
+                    <div class="modal__inputs">
+                        <label for="phone" class="modal__label">Телефон</label>
+                        <input autocomplete="off" type="phone" name="phone" id="locationPhone" data-error="Ошибка"
+                            placeholder="Введите ваше Телефон" class="modal__input" required>
+                    </div>
+                    <div class="modal__inputs">
+                        <label for="selectLocation" class="modal__label">Локация</label>
+                        <div class="modal__input modal__input_select">
+                            <ul class="modal__filter">
+                                <li class="modal__filter-selected">Выберите локацию</li>
+                                <li>
+                                    <ul class="modal__select">
+                                        <li class="modal__option">Локация 1</li>
+                                        <li class="modal__option">Локация 2</li>
+                                        <li class="modal__option">Локация 3</li>
+                                        <li class="modal__option">Локация 4</li>
+                                        <li class="modal__option">Локация 5</li>
+                                        <li class="modal__option">Локация 6</li>
+                                        <li class="modal__option">Локация 7</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button type="submit" class="modal__button btn">Отправить</button>
+                    <div class="modal__policy">
+                        <p>Нажимая кнопку «Отправить», вы даете согласие на обработку персональных данных и соглашаетесь
+                            с <a href="#" class="modal__policy-link">политикой конфиденциальности</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="modal__greeting greeting">
+        <div class="greeting__content">
+            <button type="button" class="greeting__close">Х</button>
+            <span class="greeting__title title">Благодарим за оставленную заявку!</span>
+            <div class="greeting__text">
+                <p>Наши специалисты уже обрабатывают Вашу заявку и свяжутся с Вами в ближайшее время</p>
+            </div>
+        </div>
+    </div>
+</div>

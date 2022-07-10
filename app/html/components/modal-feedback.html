@@ -1,0 +1,55 @@
+<div class="modal modal_feedback">
+    <div class="modal__wrapper">
+        <div class="modal__content">
+            <button type="button" class="modal__close">Х</button>
+
+            <div class="modal__contact">
+                <h2 class="modal__title title">Оставьте отзыв о том,
+                    как прошла ваша фотосессия</h2>
+                <form action="#" class="modal__form">
+                    <div class="modal__inputs">
+                        <label for="feedback-name" class="modal__label">Имя</label>
+                        <input autocomplete="off" type="text" name="name" id="feedbackName"
+                            placeholder="Введите ваше имя" class="modal__input" required autofocus>
+                    </div>
+                    <div class="modal__inputs">
+                        <label for="feedback-email" class="modal__label">E-mail</label>
+                        <input autocomplete="off" type="email" name="email" id="feedbackEmail"
+                            placeholder="Введите ваш E-mail" class="modal__input" required>
+                    </div>
+                    <div class="modal__inputs modal__inputs_download">
+                        <label for="feedbackMessage" class="modal__label">Отзыв</label>
+                        <textarea autocomplete="off" type="message" name="message" id="feedbackMessage"
+                            placeholder="Введите ваш отзыв" class="modal__input modal__input_textarea"
+                            required></textarea>
+                        <label for="file" class="modal__label modal__label_download"><img
+                                src="../../images/download.svg" alt="загрузить файл"></label>
+                        <input type="file" name="file" id="file" class="modal__input modal__input_download">
+                    </div>
+
+                    <button type="submit" class="modal__button modal__button_feedback btn">Отправить</button>
+                    <div class="modal__policy">
+                        <p>Нажимая кнопку «Отправить», вы даете согласие на обработку персональных данных и соглашаетесь
+                            с <a href="#" class="modal__policy-link">политикой конфиденциальности</a></p>
+                    </div>
+                </form>
+            </div>
+            <div class="modal__image">
+                <picture>
+                    <source srcset="../../images/modal/feedback-modal.png" media="(max-width: 1024px)" width="300"
+                        height="300">
+                    <img src="../../images/modal/feedback-modal.png" alt="отзыв о фотосессии" width="450"
+                        height="484" />
+                </picture>
+            </div>
+        </div>
+    </div>
+    <div class="modal__greeting greeting">
+        <div class="greeting__content">
+            <button type="button" class="greeting__close">Х</button>
+            <span class="greeting__title title">Благодарим
+                за оставленный отзыв!</span>
+            <span class="greeting__text">После проверки модератором Ваш отзыв будет добавлен на сайт</span>
+        </div>
+    </div>
+</div>

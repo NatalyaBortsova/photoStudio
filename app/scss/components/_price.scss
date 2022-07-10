@@ -135,35 +135,16 @@
                 font-size: 12px;
                 line-height: 1.2;
                 flex: 1 1 auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 @include adaptiveValue("font-size", 12, 11, 1240, 1024, 1);
             }
             &-btn {
-                position: relative;
                 cursor: pointer;
-                transition: background-color 0.3s ease 0s;
-        
+                transition: color 0.3s ease 0s; 
                 &:hover {
-                    background-color: rgba($black, 0.5);
-                    width: 100%;
-                    height: 100%;
-        
-                    &::before {
-                        opacity: 1;
-                    }
-                }
-        
-                &::before {
-                    content: 'Рассчитать';
-                    position: absolute;
-                    cursor: pointer;
-                    top: 50%;
-                    transform: translateY(-25%);
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    color: $white;
-                    opacity: 0;
-                    transition: opacity 0.3s ease 0s;
+                    color: $accent;
                 }
             }
         }
@@ -174,34 +155,6 @@
         }
     }
 
-    // [data-calculate='calculate'] {
-    //     position: relative;
-    //     background-color: #b9b4b4;
-    //     cursor: pointer;
-    //     transition: background-color 0.3s ease 0s;
-
-    //     &:hover {
-    //         background-color: rgba($black, 0.5);
-
-    //         &::before {
-    //             opacity: 1;
-    //         }
-    //     }
-
-    //     &::before {
-    //         content: 'Рассчитать';
-    //         position: absolute;
-    //         cursor: pointer;
-    //         top: 25%;
-    //         left: 0;
-    //         width: 100%;
-    //         height: 100%;
-    //         color: $white;
-    //         opacity: 0;
-    //         transition: opacity 0.3s ease 0s;
-    //     }
-
-    // }
 }
 
 .calculate {
@@ -232,6 +185,10 @@
         position: relative;
         background-color: $white;
         padding: 42px 48px;
+        @include adaptiveValue("padding-top", 42, 12, 1240, 320, 1);
+        @include adaptiveValue("padding-right", 48, 28, 1240, 320, 1);
+        @include adaptiveValue("padding-bottom", 42, 12, 1240, 320, 1);
+        @include adaptiveValue("padding-left", 48, 28, 1240, 320, 1);
     }
 
 

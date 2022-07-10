@@ -20,18 +20,19 @@
         <div class="logo"><a href="#">
             <picture>
               <source srcset="../images/logo.svg" media="(max-width: 768px)" width="80" height="25">
-              <img src="../images/logo.svg" alt="логотип" width="108" height="35" />             
+              <img src="../images/logo.svg" alt="логотип" width="108" height="35" />
             </picture>
           </a></div>
-        <ul class="header__menu menu">
-          <li class="menu__item active"><a href="#portfolio" class="menu__link" data-where="anchor" >Портфолио</a></li>
+        <ul class="header__menu menu burger-menu">
+          <li class="menu__item active"><a href="#portfolio" class="menu__link" data-where="anchor">Портфолио</a></li>
           <li class="menu__item"><a href="#portfolio" class="menu__link" data-where="anchor">Виды работ</a></li>
           <li class="menu__item"><a href="#interior" class="menu__link" data-where="anchor">О фотостудии</a></li>
           <li class="menu__item"><a href="#price" class="menu__link" data-where="anchor">Услуги и цены</a></li>
-          <li class="menu__item"><a href="#" class="menu__link" data-where="anchor">Контакты</a></li>
+          <li class="menu__item"><a href="#contact" class="menu__link" data-where="anchor">Контакты</a></li>
         </ul>
         <div class="header__contact phone-contact">
-          <button type="button" class="phone-contact__button btn btn_outline">Обратный звонок</button>
+          <button type="button" class="phone-contact__button btn btn_outline" data-order="order">Обратный
+            звонок</button>
           <a href="tel:380990000000" class="phone-contact__phone">+38 099 000 00 00</a>
         </div>
         <div class="header__burger burger">
@@ -66,7 +67,7 @@
                         заявляем, что нашей фотостудией вы останетесь довольны и еще не раз захотите возвращаться к нам.
                     </p>
                 </div>
-                <button type="button" class="hero__button btn">Получить консультацию</button>
+                <button type="button" class="hero__button btn" data-order="order">Получить консультацию</button>
             </div>
         </div>
     </div>
@@ -391,12 +392,12 @@
                             <li class="card__services-item">Визажист
                                 + 600 ₴</li>
                                 <li class="card__services-item">
-                                    <button type="button" class="card__services-btn" data-calculate='50' data-price="1500">Дополнительная ретушь фото — 1шт. / 50 ₴</button>
+                                    <button type="button" class="card__services-btn" data-calculate='50' data-price="1500">Рассчитать тариф с ретушью фото - шт/50₴</button>
                                  </li>
                         </ul>
                     </div>
                     <div class="card__bottom">
-                        <button type="button" class="card__button btn">Забронировать</button>
+                        <button type="button" class="card__button btn" data-order="order">Забронировать</button>
                     </div>
                 </article>
             </li>
@@ -426,11 +427,11 @@
                                 в позировании</li>
                             <li class="card__services-item">Визажист
                                 + 600 ₴</li>
-                            <li class="card__services-item"><button type="button" class="card__services-btn"  data-calculate='50' data-price="3000">Дополнительная ретушь фото — 1шт. / 50 ₴</button> </li>
+                            <li class="card__services-item"><button type="button" class="card__services-btn"  data-calculate='50' data-price="3000">Рассчитать тариф с ретушью фото - шт/50₴</button> </li>
                         </ul>
                     </div>
                     <div class="card__bottom">
-                        <button type="button" class="card__button btn">Забронировать</button>
+                        <button type="button" class="card__button btn" data-order="order">Забронировать</button>
                     </div>
                 </article>
             </li>
@@ -458,11 +459,11 @@
                         <span class="card__services">Дополнительные услуги</span>
                         <ul class="card__services-list">
                             <li class="card__services-item"><button type="button"
-                                    class="card__services-btn" data-calculate='50' data-price="5000" >Дополнительная ретушь фото — 1шт. / 50 ₴</button> </li>
+                                    class="card__services-btn" data-calculate='50' data-price="5000" >Рассчитать тариф с ретушью фото - шт/50₴</button> </li>
                         </ul>
                     </div>
                     <div class="card__bottom">
-                        <button type="button" class="card__button btn">Забронировать</button>
+                        <button type="button" class="card__button btn" data-order="order">Забронировать</button>
                     </div>
                 </article>
             </li>
@@ -553,7 +554,120 @@
                     <img src="../../images/gift/envelope.png" alt="Подарочный сертификат" width="493" height="493" />          
                   </picture>                
                 <span class="gift__image-term">Срок действия сертификата: 2 месяца со дня приобретения.</span>
-                <button type="button" class="gift__image-button btn">Приобрести</button>
+                <button type="button" class="gift__image-button modal-button btn">Приобрести</button>
+            </div>
+        </div>
+    </div>
+</section>
+    <section class="feedback" id="feedback">
+    <div class="container">
+        <h2 class="feedback__title title title-offset" data-aos="fade-down" data-aos-duration="1000">
+            Отзывы
+        </h2>
+        <div class="feedback__slider swiper">
+            <div class="feedback__wrapper swiper-wrapper">
+                <div class="feedback__slide swiper-slide">
+                    <div class="feedback__image">
+                        <img src="../../images/feedback/feedback-Maria.png" alt="Feedback" width="223" height="244" />
+                    </div>
+                    <span class="feedback__name">Мария</span>
+                    <div class="feedback__text collapse">
+                        <p>
+                            Приятно удивила теплая и уютная атмосфера. Сразу видно профессионализм фотографов,
+                            чувствуешь себя раскрепощенно, никакого стеснения, будто бы знакомы очень давно.
+                            Администрация на одной волне с выпускниками. Фотограф Вика очень располагает к себе,
+                            подсказывает всё по позам, даже у новичков в этом деле, получаются отличные фото. В целом
+                            остались очень довольны. Буду рекомендовать всем друзьям))
+                        </p>
+                    </div>
+                    <div class="feedback__showmore show">Показать ещё</div>
+                </div>
+                <div class="feedback__slide swiper-slide">
+                    <div class="feedback__image">
+                        <img src="../../images/feedback/feedback-Serge.png" alt="Feedback" width="223" height="244" />
+                    </div>
+                    <span class="feedback__name">Сергей</span>
+                    <div class="feedback__text collapse">
+                        <p>
+                            Очень круто, были там сегодня классом. Атмосфера бомба, фотографы и администраторы на одной
+                            волне с нами не чувствуешь дискомфорта, мне понравилось, ждём альбом.
+                        </p>
+                    </div>
+                    <div class="feedback__showmore show">Показать ещё</div>
+                </div>
+                <div class="feedback__slide swiper-slide">
+                    <div class="feedback__image">
+                        <img src="../../images/feedback/feedback-Ruslan.png" alt="Feedback" width="223" height="244" />
+                    </div>
+                    <span class="feedback__name">Руслан</span>
+                    <div class="feedback__text collapse">
+                        <p>
+                            Харизматичная и очень обаятельная Маша. Любую съемку, можно доверить такому человеку. Всегда
+                            найдёт нужный ракурс, создаст подходящую и легкую атмосферу. Фотографии получаются
+                            креативные и со смыслом. Профессионал, которого рекомендую всем 😘
+                        </p>
+                    </div>
+                    <div class="feedback__showmore show">Показать ещё</div>
+                </div>
+            </div>
+        </div>
+        <div class="feedback__slider-buttons">
+            <button type="button" class="feedback__slider-button swiper-button-prev feedback__slider-button--prev"
+                aria-label="Вернуться к предыдущему слайду"></button>
+            <button type="button" class="feedback__slider-button swiper-button-next feedback__slider-button--next"
+                aria-label="Перейти к следующему слайду"></button>
+        </div>
+        <div class="feedback__bottom">
+            <button type="button" class="feedback__button btn">Добавить отзыв</button>
+        </div>
+    </div>
+
+
+    
+</section>
+    <section class="contact" id="contact">
+    <div class="container">
+        <div class="contact__wrapper">
+            <div class="contact__map" data-aos="fade-down-right" data-aos-duration="3000">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.049286309494!2d30.408048315621663!3d50.4588068946439!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cc6802c991a9%3A0xef592ad757303a0b!2z0L_RgNC-0YHQvy4g0J_QvtCx0LXQtNGLLCDQmtC40LXQsiwgMDIwMDA!5e0!3m2!1sru!2sua!4v1657296680076!5m2!1sru!2sua"
+                    width="100%" height="540" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <span class="contact__address-open">Открыть адрес</span>
+                <address class="contact__address">
+                    <img src="../../images/logo-contact.svg" alt="логотип" class="contact__logo" width="113"
+                        height="35" />
+                    <a href="tel:380500000000" class="contact__phone">+38 (050) 000 00 00</a>
+                    <a href="mailto:contact@addmarket.ua" class="contact__email">contact@addmarket.ua</a>
+                    <span class="contact__schedule">Режим работы:<span class="contact__schedule schedule-time"> ПН-ПТ
+                            09:00 - 18:00</span>
+                    </span>
+                </address>
+            </div>
+            <div class="contact__feedback">
+                <h2 class="contact__title title" data-aos="fade-down" data-aos-duration="1000">Форма обратной связи</h2>
+                <form action="#" class="modal__form contact__form">
+                    <div class="modal__inputs">
+                        <label for="contactName" class="modal__label">Имя</label>
+                        <input autocomplete="off" type="text" name="name" id="contactName" data-error="Ошибка"
+                            placeholder="Введите ваше имя" class="modal__input" required>
+                    </div>
+                    <div class="modal__inputs">
+                        <label for="email" class="modal__label">E-mail</label>
+                        <input autocomplete="off" type="email" name="email" id="contactEmail" data-error="Ошибка"
+                            placeholder="Введите ваш E-mail" class="modal__input" required>
+                    </div>
+                    <div class="modal__inputs">
+                        <label for="phone" class="modal__label">Телефон</label>
+                        <input autocomplete="off" type="phone" name="phone" id="contactPhone" data-error="Ошибка"
+                            placeholder="Введите ваше Телефон" class="modal__input" required>
+                    </div>
+                    <button type="submit" class="modal__button btn" data-submit="submit">Отправить</button>
+                    <div class="modal__policy">
+                        <p>Нажимая кнопку «Отправить», вы даете согласие на обработку персональных данных и соглашаетесь
+                            с <a href="#" class="modal__policy-link">политикой конфиденциальности</a></p>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
@@ -563,8 +677,47 @@
 
     </main>
     <footer class="footer">
-    <div class="container"></div>
-  </footer>
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__nav navbar" title="Main menu">
+        <div class="logo"><a href="#">
+            <img src="../images/logo.svg" alt="логотип" width="212" height="55" />
+          </a></div>
+        <ul class="footer__menu menu">
+          <li class="menu__item active"><a href="#portfolio" class="menu__link" data-where="anchor">Портфолио</a></li>
+          <li class="menu__item"><a href="#portfolio" class="menu__link" data-where="anchor">Виды работ</a></li>
+          <li class="menu__item"><a href="#interior" class="menu__link" data-where="anchor">О фотостудии</a></li>
+          <li class="menu__item"><a href="#price" class="menu__link" data-where="anchor">Услуги и цены</a></li>
+          <li class="menu__item"><a href="#feedback" class="menu__link" data-where="anchor">Отзывы</a></li>
+          <li class="menu__item"><a href="#contact" class="menu__link" data-where="anchor">Контакты</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom social">
+      <span class="social__text">
+        Наши социальные сети:
+      </span>
+      <ul class="social__list" title="Социальные сети">
+        <li class="social__item"><a href="https://instagram.com" target="_blank" class="social__link"
+            aria-label="Наша страничка в Инстаграмм"><svg class="social__icon">
+              <use xlink:href="images/sprite.svg#instagram"></use>
+            </svg></a></li>
+        <li class="social__item"><a href="https://facebook.com" target="_blank" class="social__link"
+            aria-label="Наша страничка во Фейсбук"><svg class="social__icon">
+              <use xlink:href="images/sprite.svg#facebook"></use>
+            </svg></a></li>
+        <li class="social__item"><a href="https://twitter.com" target="_blank" class="social__link"
+            aria-label="Наша страничка в Твиттере"><svg class="social__icon">
+              <use xlink:href="images/sprite.svg#twitter"></use>
+            </svg></a></li>
+        <li class="social__item"><a href="https://web.telegram.org" target="_blank" class="social__link"
+            aria-label="Наша страничка в Телеграмм"><svg class="social__icon">
+              <use xlink:href="images/sprite.svg#telegram"></use>
+            </svg></a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
     <div class="modal">
     <div class="modal__wrapper">
         <div class="modal__content">
@@ -609,6 +762,182 @@
         </div>  
     </div>
 </div>
+    <div class="modal modal_feedback">
+    <div class="modal__wrapper">
+        <div class="modal__content">
+            <button type="button" class="modal__close">Х</button>
+
+            <div class="modal__contact">
+                <h2 class="modal__title title">Оставьте отзыв о том,
+                    как прошла ваша фотосессия</h2>
+                <form action="#" class="modal__form">
+                    <div class="modal__inputs">
+                        <label for="feedback-name" class="modal__label">Имя</label>
+                        <input autocomplete="off" type="text" name="name" id="feedbackName"
+                            placeholder="Введите ваше имя" class="modal__input" required autofocus>
+                    </div>
+                    <div class="modal__inputs">
+                        <label for="feedback-email" class="modal__label">E-mail</label>
+                        <input autocomplete="off" type="email" name="email" id="feedbackEmail"
+                            placeholder="Введите ваш E-mail" class="modal__input" required>
+                    </div>
+                    <div class="modal__inputs modal__inputs_download">
+                        <label for="feedbackMessage" class="modal__label">Отзыв</label>
+                        <textarea autocomplete="off" type="message" name="message" id="feedbackMessage"
+                            placeholder="Введите ваш отзыв" class="modal__input modal__input_textarea"
+                            required></textarea>
+                        <label for="file" class="modal__label modal__label_download"><img
+                                src="../../images/download.svg" alt="загрузить файл"></label>
+                        <input type="file" name="file" id="file" class="modal__input modal__input_download">
+                    </div>
+
+                    <button type="submit" class="modal__button modal__button_feedback btn">Отправить</button>
+                    <div class="modal__policy">
+                        <p>Нажимая кнопку «Отправить», вы даете согласие на обработку персональных данных и соглашаетесь
+                            с <a href="#" class="modal__policy-link">политикой конфиденциальности</a></p>
+                    </div>
+                </form>
+            </div>
+            <div class="modal__image">
+                <picture>
+                    <source srcset="../../images/modal/feedback-modal.png" media="(max-width: 1024px)" width="300"
+                        height="300">
+                    <img src="../../images/modal/feedback-modal.png" alt="отзыв о фотосессии" width="450"
+                        height="484" />
+                </picture>
+            </div>
+        </div>
+    </div>
+    <div class="modal__greeting greeting">
+        <div class="greeting__content">
+            <button type="button" class="greeting__close">Х</button>
+            <span class="greeting__title title">Благодарим
+                за оставленный отзыв!</span>
+            <span class="greeting__text">После проверки модератором Ваш отзыв будет добавлен на сайт</span>
+        </div>
+    </div>
+</div>
+    <div class="modal modal_location">
+    <div class="modal__wrapper">
+        <div class="modal__content">
+            <button type="button" class="modal__close">Х</button>
+            <div class="modal__image">
+                <picture>
+                    <source srcset="../../images/modal/location-modal.png" media="(max-width: 1024px)" width="300"
+                        height="300">
+                    <img src="../../images/modal/location-modal.png" alt="форма обратной связи" width="450"
+                        height="475" />
+                </picture>
+            </div>
+            <div class="modal__contact">
+                <h2 class="modal__title title">Форма обратной связи</h2>
+                <form action="#" class="modal__form">
+                    <div class="modal__inputs">
+                        <label for="name" class="modal__label">Имя</label>
+                        <input autocomplete="off" type="text" name="name" id="locationName" data-error="Ошибка"
+                            placeholder="Введите ваше имя" class="modal__input" required>
+                    </div>
+                    <div class="modal__inputs">
+                        <label for="email" class="modal__label">E-mail</label>
+                        <input autocomplete="off" type="email" name="email" id="locationEmail" data-error="Ошибка"
+                            placeholder="Введите ваш E-mail" class="modal__input" required>
+                    </div>
+                    <div class="modal__inputs">
+                        <label for="phone" class="modal__label">Телефон</label>
+                        <input autocomplete="off" type="phone" name="phone" id="locationPhone" data-error="Ошибка"
+                            placeholder="Введите ваше Телефон" class="modal__input" required>
+                    </div>
+                    <div class="modal__inputs">
+                        <label for="selectLocation" class="modal__label">Локация</label>
+                        <div class="modal__input modal__input_select">
+                            <ul class="modal__filter">
+                                <li class="modal__filter-selected">Выберите локацию</li>
+                                <li>
+                                    <ul class="modal__select">
+                                        <li class="modal__option">Локация 1</li>
+                                        <li class="modal__option">Локация 2</li>
+                                        <li class="modal__option">Локация 3</li>
+                                        <li class="modal__option">Локация 4</li>
+                                        <li class="modal__option">Локация 5</li>
+                                        <li class="modal__option">Локация 6</li>
+                                        <li class="modal__option">Локация 7</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button type="submit" class="modal__button btn">Отправить</button>
+                    <div class="modal__policy">
+                        <p>Нажимая кнопку «Отправить», вы даете согласие на обработку персональных данных и соглашаетесь
+                            с <a href="#" class="modal__policy-link">политикой конфиденциальности</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="modal__greeting greeting">
+        <div class="greeting__content">
+            <button type="button" class="greeting__close">Х</button>
+            <span class="greeting__title title">Благодарим за оставленную заявку!</span>
+            <div class="greeting__text">
+                <p>Наши специалисты уже обрабатывают Вашу заявку и свяжутся с Вами в ближайшее время</p>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="modal modal_order">
+    <div class="modal__wrapper">
+        <div class="modal__content">
+            <button type="button" class="modal__close">Х</button>
+            <div class="modal__contact">
+                <h2 class="modal__title title">Форма обратной связи</h2>
+                <form action="#" class="modal__form">
+                    <div class="modal__inputs">
+                        <label for="orderName" class="modal__label">Имя</label>
+                        <input autocomplete="off" type="text" name="name" id="orderName" data-error="Ошибка"
+                            placeholder="Введите ваше имя" class="modal__input" required>
+                    </div>
+                    <div class="modal__inputs">
+                        <label for="orderEmail" class="modal__label">E-mail</label>
+                        <input autocomplete="off" type="email" name="email" id="orderEmail" data-error="Ошибка"
+                            placeholder="Введите ваш E-mail" class="modal__input" required>
+                    </div>
+                    <div class="modal__inputs">
+                        <label for="orderPhone" class="modal__label">Телефон</label>
+                        <input autocomplete="off" type="phone" name="phone" id="orderPhone" data-error="Ошибка"
+                            placeholder="Введите ваше Телефон" class="modal__input" required>
+                    </div>
+                    <button type="submit" class="modal__button btn">Отправить</button>
+                    <div class="modal__policy">
+                        <p>Нажимая кнопку «Отправить», вы даете согласие на обработку персональных данных и соглашаетесь
+                            с <a href="#" class="modal__policy-link">политикой конфиденциальности</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="modal__greeting greeting">
+        <div class="greeting__content">
+            <button type="button" class="greeting__close">Х</button>
+            <span class="greeting__title title">Благодарим за оставленную заявку!</span>
+            <div class="greeting__text">
+                <p>Наши специалисты уже обрабатывают Вашу заявку и свяжутся с Вами в ближайшее время</p>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="modal modal_submit">
+    <div class="modal__wrapper">
+        <div class="modal__content">
+            <button type="button" class="modal__close">Х</button>
+            <span class="greeting__title title">Благодарим за оставленную заявку!</span>
+            <div class="greeting__text">
+                <p>Наши специалисты уже обрабатывают Вашу заявку и свяжутся с Вами в ближайшее время</p>
+            </div>
+        </div>
+    </div>
+</div>
+
   </div>
 
   <script src="js/main.min.js"></script>

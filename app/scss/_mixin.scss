@@ -56,25 +56,6 @@
 		}
 	}
 }
-// @mixin adaptive-value($property, $startSize, $minSize, $type){
-//     $addSize: $startSize - $minSize;
-//     @if $type== 1 {
-//         #{$property}: $startSize + px;
-//         @media(max-width: #{$containerWidth + px}) {
-//             #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$containerWidth - 320}));
-//   }
-//   }
-//     @else if $type== 2{
-//       #{$property}: $startSize + px;
-//       @media(min-width: #{$containerWidth + px}) {
-//         #{$property}: calc(#{$minSize + px } + #{$addSize} * ((100vw - 320px) / #{$maxWidth- 320}));
-//         }
-        
-//       }
-//     @else {
-//       #{$property}: calc(#{minSize + px } + #{$addSize} * ((100vw - 320px) / #{$maxWidth- 320} ));
-//       }
-//   }
 
   @mixin pseudo($display: block, $pos: absolute, $content: '') {
     content: $content;

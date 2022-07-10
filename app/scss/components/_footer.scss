@@ -1,0 +1,79 @@
+.footer {
+    padding: 60px 0;
+    @include adaptiveValue("padding-top", 60, 30, 1240, 320, 1);
+    @include adaptiveValue("padding-bottom", 30, 30, 1240, 320, 1);
+    background-color: $bg;
+
+
+    &__nav {
+        @include r(575) {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    .logo {
+        @include r(575) {
+            flex: auto;
+            margin-right: 0;
+        }
+    }
+
+    &__top {
+        padding-bottom: 32px;
+        border-bottom: 1px solid #B1B1B1;
+    }
+
+    &__bottom {
+        padding-top: 32px;
+        color: $secondaryColor;
+        line-height: 28px;
+    }
+
+    &__menu {
+        flex: 0 0 70%;
+       
+        @include r(992) {
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+    }
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+
+    @include r(575) {
+        flex-direction: column;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+    }
+
+    &__icon {
+        width: 31px;
+        height: 31px;
+        fill: $social;
+        transition: fill 0.3s ease 0s;
+
+        &:hover {
+            fill: $accent;
+        }
+    }
+
+    &__link {
+        display: block;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        width: 31px;
+        height: 31px;
+    }
+}

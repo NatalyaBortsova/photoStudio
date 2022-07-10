@@ -24,25 +24,27 @@ nav {
     justify-content: space-between;
     align-items: center;
 
-    @include r(992) {
-        position: fixed;
-        flex-direction: column;
-        justify-content: start;
-        height: 100vh;
-        width: 100vw;
-        background-color: $mainColor;
-        color: $white;
-        padding: 70px 0 20px;
-        z-index: 6;
-        left: 0;
-        top: 0;
-        transform: translateY(-200%);
-        opacity: 0;
-        transition: opacity 0.5s ease-in-out, transform 0.5s ease-out;
+    &.burger-menu {
+        @include r(992) {
+            position: fixed;
+            flex-direction: column;
+            justify-content: start;
+            height: 100vh;
+            width: 100vw;
+            background-color: $mainColor;
+            color: $white;
+            padding: 70px 0 20px;
+            z-index: 6;
+            left: 0;
+            top: 0;
+            transform: translateY(-200%);
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-out;
 
-        &.active {
-            transform: translateY(0%);
-            opacity: 1;
+            &.active {
+                transform: translateY(0%);
+                opacity: 1;
+            }
         }
     }
 
