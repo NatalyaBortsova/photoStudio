@@ -21,6 +21,7 @@ nav {
 
 .menu {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 
@@ -37,6 +38,7 @@ nav {
             z-index: 6;
             left: 0;
             top: 0;
+            overflow: auto;
             transform: translateY(-200%);
             opacity: 0;
             transition: opacity 0.5s ease-in-out, transform 0.5s ease-out;
